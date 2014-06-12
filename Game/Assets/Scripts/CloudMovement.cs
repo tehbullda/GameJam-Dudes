@@ -29,7 +29,6 @@ public class CloudMovement : MonoBehaviour
                 outsideScreenPos.x = Camera.main.transform.position.x + 8.0f;
                 outsideScreenPos.y = Random.Range(0.8f, 4.0f);
                 transform.position = outsideScreenPos;
-                Debug.Log(outsideScreenPos);
             }
         }
     }

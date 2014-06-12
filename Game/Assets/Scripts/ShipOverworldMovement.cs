@@ -62,6 +62,5 @@ public class ShipOverworldMovement : MonoBehaviour
     {
         Destination = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         Destination.z = 0;
-        
     }
 }
