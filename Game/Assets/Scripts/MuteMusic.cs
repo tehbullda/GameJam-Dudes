@@ -9,6 +9,8 @@ public class MuteMusic : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         renderer.material.mainTexture = unmutedtexture;
+        renderer.material.shader = Shader.Find("Transparent/Diffuse");
+        //renderer.material.color.a = 1.0f;
 	}
 	
 	// Update is called once per frame
@@ -21,9 +23,13 @@ public class MuteMusic : MonoBehaviour {
         AudioListener.pause = muted;
         if (muted) {
             renderer.material.mainTexture = mutedtexture;
+            renderer.material.shader = Shader.Find("Transparent/Diffuse");
+            //renderer.material.color.a = 1.0f; 
         }
         else {
             renderer.material.mainTexture = unmutedtexture;
+            renderer.material.shader = Shader.Find("Transparent/Diffuse");
+            //renderer.material.color.a = 1.0f;
         }
     }
 }
