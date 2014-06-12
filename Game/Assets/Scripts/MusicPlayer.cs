@@ -13,6 +13,7 @@ public class MusicPlayer : MonoBehaviour
         if (BackgroundMusic)
         {
             audio.clip = BackgroundMusic;
+            audio.volume = 0.1f;
             audio.Play();
         }
     }
