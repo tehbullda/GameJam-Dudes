@@ -12,7 +12,9 @@ public class Globals : MonoBehaviour {
 
     public static float Accuracy = 0.85f;
     public static float Evasion = 0.30f;
+    public static GameObject Target;
 
+    public static bool WeaponTargetingActive = false;
     public static bool GamePaused = false;
     public static GameState state = GameState.OVERWORLD;
 

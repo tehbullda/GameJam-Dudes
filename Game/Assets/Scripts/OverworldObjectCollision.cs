@@ -16,10 +16,10 @@ public class OverworldObjectCollision : MonoBehaviour {
 
     void OnCollisionEnter(Collision col)
     {
-        print("hellooooe");
         if (col.gameObject.name == "Overworld_PlayerShip")
         {
             Globals.state = Globals.GameState.ENCOUNTER;
+            Destroy(gameObject);
         }
     }
 }

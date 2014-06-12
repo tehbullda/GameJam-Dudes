@@ -4,6 +4,7 @@ using System.Collections;
 public class SelectWeaponTarget : MonoBehaviour {
     public Texture Inactive;
     public Texture Active;
+
 	// Use this for initialization
 	void Start () {
         renderer.material.mainTexture = Inactive;
@@ -17,10 +18,13 @@ public class SelectWeaponTarget : MonoBehaviour {
         else if (Globals.state == Globals.GameState.ENCOUNTER && gameObject.layer != 5){
             gameObject.layer = 5;
         }
-        if (Input.GetKeyDown("escape") && Globals.GamePaused) {
+        if (Input.GetKeyDown("escape") && Globals.WeaponTargetingActive)
+        {
             Globals.GamePaused = false;
+            Globals.WeaponTargetingActive = false;
         }
-        else if (!Globals.GamePaused && renderer.material.mainTexture != Inactive) {
+        else if (!Globals.WeaponTargetingActive && renderer.material.mainTexture != Inactive)
+        {
             renderer.material.mainTexture = Inactive;
             Debug.Log("Resetting texture");
         }
@@ -30,5 +34,6 @@ public class SelectWeaponTarget : MonoBehaviour {
         Debug.Log("Aiming Engaged");
         renderer.material.mainTexture = Active;
         Globals.GamePaused = true;
+        Globals.WeaponTargetingActive = true;
     }
 }

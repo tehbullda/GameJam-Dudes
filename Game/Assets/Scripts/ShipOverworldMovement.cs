@@ -3,10 +3,10 @@ using System.Collections;
 
 public class ShipOverworldMovement : MonoBehaviour
 {
-
     private Vector3 Destination;
     public float Movespeed = 1.0f;
     static public bool CanMove = true;
+    public GameObject Background;
 
     // Use this for initialization
     void Start()
@@ -44,6 +44,13 @@ public class ShipOverworldMovement : MonoBehaviour
                     Vector3 newCameraPosition = Camera.main.transform.position;
                     newCameraPosition.y = transform.position.y;
                     Camera.main.transform.position = newCameraPosition;
+                    if (Background)
+                    {
+                        Vector3 newBgPos = Background.transform.position;
+                        newBgPos.x = newCameraPosition.x;
+                        newBgPos.y = newCameraPosition.y;
+                        Background.transform.position = newBgPos;
+                    }
                 }
             }
             if (Input.GetMouseButtonDown(0))
