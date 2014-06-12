@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\CloudMovement.cs" />
+     <Compile Include="Assets\Scripts\Button.cs" />
      <Compile Include="Assets\Scripts\MusicPlayer.cs" />
      <Compile Include="Assets\Scripts\SetAlpha.cs" />
      <None Include="Assets\Standard Assets\Skyboxes\_skybox info.txt" />
