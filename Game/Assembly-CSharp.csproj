@@ -50,6 +50,7 @@
      <Compile Include="Assets\Scripts\CloudMovement.cs" />
      <Compile Include="Assets\Scripts\Globals.cs" />
      <Compile Include="Assets\Scripts\MusicPlayer.cs" />
+     <Compile Include="Assets\Scripts\MuteMusic.cs" />
      <Compile Include="Assets\Scripts\SelectWeaponTarget.cs" />
      <Compile Include="Assets\Scripts\SetAlpha.cs" />
      <Compile Include="Assets\Scripts\UI_Accuracy.cs" />
