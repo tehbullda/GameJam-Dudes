@@ -10,6 +10,11 @@ public class UI_Accuracy : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        gameObject.guiText.text = "Accuracy: " + (Globals.Accuracy * 100).ToString();
+        if (Globals.state == Globals.GameState.ENCOUNTER) {
+            gameObject.guiText.text = "Accuracy: " + (Globals.Accuracy * 100).ToString();
+        }
+        else {
+            gameObject.guiText.text = "";
+        }
 	}
 }
