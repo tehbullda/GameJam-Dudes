@@ -53,6 +53,7 @@
      <Compile Include="Assets\Scripts\MuteMusic.cs" />
      <Compile Include="Assets\Scripts\SelectWeaponTarget.cs" />
      <Compile Include="Assets\Scripts\SetAlpha.cs" />
+     <Compile Include="Assets\Scripts\ShipOverworldMovement.cs" />
      <Compile Include="Assets\Scripts\UI_Accuracy.cs" />
      <Compile Include="Assets\UI_Evasion.cs" />
      <None Include="Assets\Standard Assets\Skyboxes\_skybox info.txt" />
