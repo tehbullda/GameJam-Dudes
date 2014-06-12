@@ -22,7 +22,7 @@ public class ShipOverworldMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Globals.state == Globals.GameState.OVERWORLD && CanMove)
+        if (Globals.eState == Globals.GameState.OVERWORLD && CanMove)
         {
             if (Vector3.Distance(transform.position, Destination) > 1.0f)
             {
@@ -36,8 +36,6 @@ public class ShipOverworldMovement : MonoBehaviour
                 newPos.x += direction.x;
                 newPos.y += direction.y;
                 transform.position = newPos;
-                Debug.Log(transform.position);
-
                 //camera move check
                 if (transform.position.y > Camera.main.transform.position.y)
                 {

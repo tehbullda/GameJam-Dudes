@@ -17,18 +17,18 @@ public class SwapViewOnStateChange : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (eCurrentState != Globals.state)
+        if (eCurrentState != Globals.eState)
         {
-            if (Globals.state == Globals.GameState.ENCOUNTER)
+            if (Globals.eState == Globals.GameState.ENCOUNTER)
             {
                 OverworldCameraPos = transform.position;
                 transform.position = EncounterCameraPos;
             }
-            else if (Globals.state == Globals.GameState.OVERWORLD)
+            else if (Globals.eState == Globals.GameState.OVERWORLD)
             {
                 transform.position = OverworldCameraPos;
             }
-            eCurrentState = Globals.state;
+            eCurrentState = Globals.eState;
         }
     }
 }

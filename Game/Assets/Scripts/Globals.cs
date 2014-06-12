@@ -10,13 +10,21 @@ public class Globals : MonoBehaviour {
         INVENTORY
     };
 
+    public enum EncounterType
+    {
+        BOAT,
+        ISLAND,
+    };
+
     public static float Accuracy = 0.85f;
     public static float Evasion = 0.30f;
     public static GameObject Target;
 
     public static bool WeaponTargetingActive = false;
     public static bool GamePaused = false;
-    public static GameState state = GameState.OVERWORLD;
+
+    public static GameState eState = GameState.OVERWORLD;
+    public static EncounterType eEncounter;
 
 	// Use this for initialization
 	void Start () {

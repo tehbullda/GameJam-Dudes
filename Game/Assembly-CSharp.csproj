@@ -58,6 +58,7 @@
      <Compile Include="Assets\Scripts\ShipOverworldMovement.cs" />
      <Compile Include="Assets\Scripts\SwapViewOnStateChange.cs" />
      <Compile Include="Assets\Scripts\UI_Accuracy.cs" />
+     <Compile Include="Assets\Scripts\UI_CurrentTarget.cs" />
      <Compile Include="Assets\Scripts\UI_Evasion.cs" />
      <None Include="Assets\Standard Assets\Skyboxes\_skybox info.txt" />
      <None Include="Assets\Standard Assets\Water (Basic)\Sources\Shaders\FX-Water Simple.shader" />
