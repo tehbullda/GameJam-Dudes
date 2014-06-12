@@ -57,16 +57,6 @@ public class ShipOverworldMovement : MonoBehaviour
     {
         Destination = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         Destination.z = 0;
-        //Aim player at mouse
-        //which direction is up
-        Vector3 upAxis = new Vector3(0, 0, -1);
-        Vector3 mouseScreenPosition = Input.mousePosition;
-        //set mouses z to your targets
-        mouseScreenPosition.z = transform.position.z;
-        Vector3 mouseWorldSpace = Camera.main.ScreenToWorldPoint(mouseScreenPosition);
-        transform.LookAt(mouseWorldSpace, upAxis);
-        //zero out all rotations except the axis I want
-        transform.eulerAngles = new Vector3(-transform.eulerAngles.z, 0, 0);
         
     }
 }
