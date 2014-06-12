@@ -9,6 +9,7 @@ public class MusicPlayer : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+
         if (BackgroundMusic)
         {
             audio.clip = BackgroundMusic;
