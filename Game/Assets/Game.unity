@@ -74,37 +74,49 @@ NavMeshSettings:
     widthInaccuracy: 16.666666
     heightInaccuracy: 10
   m_NavMesh: {fileID: 0}
---- !u!1 &111189787
+--- !u!1 &155214256
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   serializedVersion: 4
   m_Component:
-  - 4: {fileID: 111189791}
-  - 33: {fileID: 111189790}
-  - 64: {fileID: 111189789}
-  - 23: {fileID: 111189788}
+  - 4: {fileID: 155214257}
+  - 33: {fileID: 155214260}
+  - 64: {fileID: 155214259}
+  - 23: {fileID: 155214258}
   m_Layer: 0
-  m_Name: EnemyShip
+  m_Name: PlayerShip_Sail
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!23 &111189788
+--- !u!4 &155214257
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 155214256}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -.234228998, y: .110466026, z: -13.6480484}
+  m_LocalScale: {x: .558228374, y: 1, z: 2.27880979}
+  m_Children: []
+  m_Father: {fileID: 1141400392}
+  m_RootOrder: 1
+--- !u!23 &155214258
 Renderer:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 111189787}
+  m_GameObject: {fileID: 155214256}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: d6360d2db497b22429b92d042d54596b, type: 2}
+  - {fileID: 2100000, guid: d5fc356878aa6c54b81f04fc7fa9d3e6, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -112,12 +124,12 @@ Renderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
---- !u!64 &111189789
+--- !u!64 &155214259
 MeshCollider:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 111189787}
+  m_GameObject: {fileID: 155214256}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
@@ -125,25 +137,13 @@ MeshCollider:
   m_SmoothSphereCollisions: 0
   m_Convex: 0
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!33 &111189790
+--- !u!33 &155214260
 MeshFilter:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 111189787}
+  m_GameObject: {fileID: 155214256}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!4 &111189791
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 111189787}
-  m_LocalRotation: {x: 0, y: -.707106829, z: .707106829, w: 0}
-  m_LocalPosition: {x: -3.79555774, y: .0429129601, z: -3.76140237}
-  m_LocalScale: {x: -.311239421, y: 1, z: .0837874785}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 9
 --- !u!1 &353272041
 GameObject:
   m_ObjectHideFlags: 0
@@ -156,7 +156,7 @@ GameObject:
   - 64: {fileID: 353272043}
   - 23: {fileID: 353272042}
   m_Layer: 0
-  m_Name: Plane
+  m_Name: WaterBack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -208,12 +208,12 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 353272041}
-  m_LocalRotation: {x: 0, y: -.707106829, z: .707106829, w: 0}
-  m_LocalPosition: {x: 0, y: -3.43848658, z: -.996580601}
-  m_LocalScale: {x: 1.37051451, y: 1, z: .332429886}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: .996581137, z: 3.35689235}
+  m_LocalScale: {x: 1, y: 1, z: .32454139}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_Father: {fileID: 1776256644}
+  m_RootOrder: 0
 --- !u!1 &394362557
 GameObject:
   m_ObjectHideFlags: 0
@@ -227,7 +227,7 @@ GameObject:
   - 23: {fileID: 394362559}
   - 114: {fileID: 394362558}
   m_Layer: 0
-  m_Name: Plane
+  m_Name: Could2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -291,12 +291,12 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 394362557}
-  m_LocalRotation: {x: 0, y: -.707106829, z: .707106829, w: 0}
-  m_LocalPosition: {x: 8.17971134, y: -.60607934, z: -.996580243}
-  m_LocalScale: {x: .186235905, y: 1, z: .0677938536}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -5.96835232, y: .996579945, z: -1.58840406}
+  m_LocalScale: {x: .135887578, y: 1, z: .0661851242}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_Father: {fileID: 1776256644}
+  m_RootOrder: 2
 --- !u!1 &864632922
 GameObject:
   m_ObjectHideFlags: 0
@@ -310,7 +310,7 @@ GameObject:
   - 23: {fileID: 864632924}
   - 114: {fileID: 864632923}
   m_Layer: 0
-  m_Name: Plane
+  m_Name: Cloud1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -374,12 +374,12 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 864632922}
-  m_LocalRotation: {x: 0, y: -.707106829, z: .707106829, w: 0}
-  m_LocalPosition: {x: 10.6204014, y: 3.36677742, z: -.996579766}
-  m_LocalScale: {x: .186235905, y: 1, z: .0677938536}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -7.74920988, y: .996579468, z: -3.28688502}
+  m_LocalScale: {x: .135887578, y: 1, z: .0661851242}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_Father: {fileID: 1776256644}
+  m_RootOrder: 3
 --- !u!1 &995894168
 GameObject:
   m_ObjectHideFlags: 0
@@ -442,7 +442,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
 --- !u!1 &1141400388
 GameObject:
   m_ObjectHideFlags: 0
@@ -455,7 +455,7 @@ GameObject:
   - 64: {fileID: 1141400390}
   - 23: {fileID: 1141400389}
   m_Layer: 0
-  m_Name: Plane
+  m_Name: PlayerShip_Hull
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -473,7 +473,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: 9fc3c42dfeeb1ab4ebf5ef7a3c1917db, type: 2}
+  - {fileID: 2100000, guid: 914d773825222a94187a582efc5737a9, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -510,9 +510,11 @@ Transform:
   m_LocalRotation: {x: 0, y: -.707106829, z: .707106829, w: 0}
   m_LocalPosition: {x: 3.80481911, y: -2.08514857, z: -3.76140261}
   m_LocalScale: {x: .542761743, y: 1, z: .142589524}
-  m_Children: []
+  m_Children:
+  - {fileID: 1706196894}
+  - {fileID: 155214257}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 3
 --- !u!1 &1274674282
 GameObject:
   m_ObjectHideFlags: 0
@@ -543,7 +545,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: d6360d2db497b22429b92d042d54596b, type: 2}
+  - {fileID: 2100000, guid: 8a6e565619de1ce4ea9f7ed87af308c1, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -582,7 +584,7 @@ Transform:
   m_LocalScale: {x: -.311239421, y: 1, z: .0837874785}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 4
 --- !u!1 &1534259443
 GameObject:
   m_ObjectHideFlags: 0
@@ -739,6 +741,76 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
+--- !u!1 &1706196893
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1706196894}
+  - 33: {fileID: 1706196897}
+  - 64: {fileID: 1706196896}
+  - 23: {fileID: 1706196895}
+  m_Layer: 0
+  m_Name: PlayerShip_Mast
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1706196894
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1706196893}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -.332718462, y: -.301438808, z: -11.9444809}
+  m_LocalScale: {x: .558228135, y: 1, z: 2.98939204}
+  m_Children: []
+  m_Father: {fileID: 1141400392}
+  m_RootOrder: 0
+--- !u!23 &1706196895
+Renderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1706196893}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 2100000, guid: 129d1a0f016bed44ca9aa0ac72cc6c47, type: 2}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+--- !u!64 &1706196896
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1706196893}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_SmoothSphereCollisions: 0
+  m_Convex: 0
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!33 &1706196897
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1706196893}
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1776256640
 GameObject:
   m_ObjectHideFlags: 0
@@ -751,7 +823,7 @@ GameObject:
   - 64: {fileID: 1776256642}
   - 23: {fileID: 1776256641}
   m_Layer: 0
-  m_Name: Plane
+  m_Name: Sky
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -806,7 +878,11 @@ Transform:
   m_LocalRotation: {x: 0, y: -.707106829, z: .707106829, w: 0}
   m_LocalPosition: {x: 0, y: -1.78813934e-07, z: 0}
   m_LocalScale: {x: 1.37051451, y: 1, z: 1.02430654}
-  m_Children: []
+  m_Children:
+  - {fileID: 353272045}
+  - {fileID: 1778331053}
+  - {fileID: 394362562}
+  - {fileID: 864632927}
   m_Father: {fileID: 0}
   m_RootOrder: 1
 --- !u!1 &1778331048
@@ -822,7 +898,7 @@ GameObject:
   - 23: {fileID: 1778331050}
   - 114: {fileID: 1778331049}
   m_Layer: 0
-  m_Name: Plane
+  m_Name: WaterFront
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -886,9 +962,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1778331048}
-  m_LocalRotation: {x: 0, y: -.707106829, z: .707106829, w: 0}
-  m_LocalPosition: {x: 0, y: -3.43848705, z: -5.11679935}
-  m_LocalScale: {x: 1.37051451, y: 1, z: .332429886}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 5.11680031, z: 3.3568933}
+  m_LocalScale: {x: 1, y: 1, z: .32454139}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_Father: {fileID: 1776256644}
+  m_RootOrder: 1
