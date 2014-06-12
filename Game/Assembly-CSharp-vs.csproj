@@ -46,6 +46,15 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Backup\Scripts\Button.cs" />
+     <Compile Include="Assets\Backup\Scripts\CloudMovement.cs" />
+     <Compile Include="Assets\Backup\Scripts\Globals.cs" />
+     <Compile Include="Assets\Backup\Scripts\MusicPlayer.cs" />
+     <Compile Include="Assets\Backup\Scripts\MuteMusic.cs" />
+     <Compile Include="Assets\Backup\Scripts\SelectWeaponTarget.cs" />
+     <Compile Include="Assets\Backup\Scripts\SetAlpha.cs" />
+     <Compile Include="Assets\Backup\Scripts\UI_Accuracy.cs" />
+     <Compile Include="Assets\Backup\Scripts\UI_Evasion.cs" />
      <Compile Include="Assets\Scripts\Button.cs" />
      <Compile Include="Assets\Scripts\CloudMovement.cs" />
      <Compile Include="Assets\Scripts\Globals.cs" />
