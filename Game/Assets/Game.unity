@@ -1511,8 +1511,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1865870fa03e8d4491e501d111659d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mutedtexture: {fileID: 0}
-  unmutedtexture: {fileID: 0}
+  mutedtexture: {fileID: 2800000, guid: 77b66ea2d97793d49a14aa145790a7d2, type: 3}
+  unmutedtexture: {fileID: 2800000, guid: b0d8b80057780b043909216bf8b78012, type: 3}
 --- !u!23 &1786649517
 Renderer:
   m_ObjectHideFlags: 0
