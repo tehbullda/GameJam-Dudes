@@ -1,0 +1,25 @@
+﻿using UnityEngine;
+using System.Collections;
+
+public class OverworldObjectCollision : MonoBehaviour {
+
+	// Use this for initialization
+	void Start () {
+	
+	}
+	
+	// Update is called once per frame
+    void Update()
+    {
+
+	}
+
+    void OnCollisionEnter(Collision col)
+    {
+        print("hellooooe");
+        if (col.gameObject.name == "Overworld_PlayerShip")
+        {
+            Globals.state = Globals.GameState.ENCOUNTER;
+        }
+    }
+}
