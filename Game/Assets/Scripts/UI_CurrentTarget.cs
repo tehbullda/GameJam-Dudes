@@ -1,21 +1,29 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class UI_Accuracy : MonoBehaviour {
-    public int TextSize = 4;
+public class UI_CurrentTarget : MonoBehaviour {
+
 	// Use this for initialization
 	void Start () {
-        gameObject.guiText.fontSize = TextSize;
+	
 	}
 	
 	// Update is called once per frame
 	void Update () {
         if (Globals.eState == Globals.GameState.ENCOUNTER)
         {
-            gameObject.guiText.text = "Accuracy: " + (Globals.Accuracy * 100).ToString();
+            if (Globals.Target)
+            {
+                gameObject.guiText.text = Globals.Target.name;
+            }
+            else
+            {
+                gameObject.guiText.text = "No target";
+            }
         }
         else {
             gameObject.guiText.text = "";
         }
+        
 	}
 }
