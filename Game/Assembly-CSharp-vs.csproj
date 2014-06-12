@@ -48,6 +48,7 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\Button.cs" />
      <Compile Include="Assets\Scripts\CloudMovement.cs" />
+     <Compile Include="Assets\Scripts\EncounterSpawner.cs" />
      <Compile Include="Assets\Scripts\EnemyTarget.cs" />
      <Compile Include="Assets\Scripts\Globals.cs" />
      <Compile Include="Assets\Scripts\MusicPlayer.cs" />

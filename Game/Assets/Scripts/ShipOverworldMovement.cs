@@ -36,7 +36,6 @@ public class ShipOverworldMovement : MonoBehaviour
                 newPos.x += direction.x;
                 newPos.y += direction.y;
                 transform.position = newPos;
-                Debug.Log(transform.position);
 
                 //camera move check
                 if (transform.position.y > Camera.main.transform.position.y)
@@ -64,6 +63,5 @@ public class ShipOverworldMovement : MonoBehaviour
     {
         Destination = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         Destination.z = 0;
-        
     }
 }
