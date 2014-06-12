@@ -3,18 +3,10 @@ using System.Collections;
 
 public class Globals : MonoBehaviour {
 
-    public enum GameState
-    {
-        OVERWORLD,
-        ENCOUNTER,
-        INVENTORY
-    };
-
     public static float Accuracy = 0.85f;
     public static float Evasion = 0.30f;
 
     public static bool GamePaused = false;
-    public static GameState state = GameState.OVERWORLD;
 
 	// Use this for initialization
 	void Start () {

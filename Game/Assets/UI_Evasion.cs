@@ -10,11 +10,6 @@ public class UI_Evasion : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (Globals.state == Globals.GameState.ENCOUNTER) {
-            gameObject.guiText.text = "Evasion: " + (Globals.Evasion * 100).ToString();
-        }
-        else {
-            gameObject.guiText.text = "";
-        }
+        gameObject.guiText.text = "Evasion: " + (Globals.Evasion * 100).ToString();
 	}
 }
