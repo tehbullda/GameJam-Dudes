@@ -2,7 +2,17 @@
 using System.Collections;
 
 public class Button : MonoBehaviour {
+    public enum TextOrTexture
+    {
+        Text,
+        Texture
+    };
+    public TextOrTexture choice;
 
+    public string Text;
+    public Texture Texture;
+
+    public Rect Rectangle;
 	// Use this for initialization
 	void Start () {
 	
@@ -13,7 +23,10 @@ public class Button : MonoBehaviour {
 	
 	}
 	void OnGUI() {
-        if (GUI.Button(new Rect(100, 170, 150, 130), "Start Game"))
-            Application.LoadLevel(1);
+        if (choice == TextOrTexture.Text) {
+            if (GUI.Button(Rectangle, Text)) {
+                Application.LoadLevel(1);
+            }
+        }
 	}
 }
