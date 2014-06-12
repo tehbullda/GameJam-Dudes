@@ -23,10 +23,11 @@ public class ShipOverworldMovement : MonoBehaviour
     {
         if (Globals.state == Globals.GameState.OVERWORLD)
         {
-            if (Vector3.Distance(transform.position, Destination) > 20.0f)
+            if (Vector3.Distance(transform.position, Destination) > 1.0f)
             {
                 Vector3 direction = Destination - transform.position;
                 direction.Normalize();
+                direction.z = 0;
                 direction *= Movespeed;
                 direction *= Time.deltaTime;
 
@@ -45,7 +46,7 @@ public class ShipOverworldMovement : MonoBehaviour
 
     void SetNewDestination()
     {
-        //Destination = Input.mousePosition;
         Destination = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        Destination.z = 0;
     }
 }
