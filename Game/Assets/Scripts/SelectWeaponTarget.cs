@@ -11,13 +11,18 @@ public class SelectWeaponTarget : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (!Globals.GamePaused && renderer.material.mainTexture != Inactive) {
+        if (Input.GetKeyDown("escape") && Globals.GamePaused) {
+            Globals.GamePaused = false;
+        }
+        else if (!Globals.GamePaused && renderer.material.mainTexture != Inactive) {
             renderer.material.mainTexture = Inactive;
+            Debug.Log("Resetting texture");
         }
 	}
 
     void OnMouseDown() {
         Debug.Log("Aiming Engaged");
         renderer.material.mainTexture = Active;
+        Globals.GamePaused = true;
     }
 }
