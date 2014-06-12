@@ -11,6 +11,12 @@ public class SelectWeaponTarget : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        if (Globals.state != Globals.GameState.ENCOUNTER && gameObject.layer != 8)  {
+            gameObject.layer = 8;
+        }
+        else if (Globals.state == Globals.GameState.ENCOUNTER && gameObject.layer != 5){
+            gameObject.layer = 5;
+        }
         if (Input.GetKeyDown("escape") && Globals.GamePaused) {
             Globals.GamePaused = false;
         }

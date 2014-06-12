@@ -55,10 +55,11 @@
      <Compile Include="Assets\Scripts\SetAlpha.cs" />
      <Compile Include="Assets\Scripts\ShipOverworldMovement.cs" />
      <Compile Include="Assets\Scripts\UI_Accuracy.cs" />
+     <Compile Include="Assets\UI_Evasion.cs" />
      <None Include="Assets\Standard Assets\Skyboxes\_skybox info.txt" />
      <None Include="Assets\Standard Assets\Water (Basic)\Sources\Shaders\FX-Water Simple.shader" />
  <Reference Include="Assembly-UnityScript-firstpass">
- <HintPath>D:/Projekt/Github storage/GameJam-Dudes/Game/Library/ScriptAssemblies/Assembly-UnityScript-firstpass.dll</HintPath>
+ <HintPath>C:/Users/Bullda/Documents/GitHub/GameJam-Dudes/Game/Library/ScriptAssemblies/Assembly-UnityScript-firstpass.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>
