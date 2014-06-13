@@ -1074,7 +1074,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: .0500000007
   m_UseGravity: 0
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -2066,6 +2066,8 @@ GameObject:
   - 33: {fileID: 1583096280}
   - 64: {fileID: 1583096279}
   - 23: {fileID: 1583096278}
+  - 114: {fileID: 1583096283}
+  - 114: {fileID: 1583096282}
   m_Layer: 0
   m_Name: Overworld_Background
   m_TagString: Untagged
@@ -2125,6 +2127,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 6
+--- !u!114 &1583096282
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1583096277}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 622edd043d3f18e4490b6c974c96fe00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fSpawnTimerReset: 2
+  fSpawnTimerCurrent: 2
+  EnemyShipObject: {fileID: 100000, guid: f9d4d35716d35ba41a7abf231e660d03, type: 2}
+  aIslandObjectTypes:
+  - {fileID: 100000, guid: 53ee14aafb09605428aea4dd7b10367c, type: 2}
+  - {fileID: 100000, guid: fcf3f666dbbde7341b3e574af3fab497, type: 2}
+  - {fileID: 100000, guid: 78835b10ffd38a74e9ab07ad5d1fa444, type: 2}
+--- !u!114 &1583096283
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1583096277}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19eece4c22d3c1a48a71ed72e29d1d8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  iWaveLimit: 5
+  WaveObjectType: {fileID: 100000, guid: b9fe55be3e1efcc4a89cc1d8ce0ed682, type: 2}
 --- !u!1 &1647903051
 GameObject:
   m_ObjectHideFlags: 0
