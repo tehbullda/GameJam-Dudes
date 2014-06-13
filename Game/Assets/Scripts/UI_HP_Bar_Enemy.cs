@@ -15,7 +15,7 @@ public class UI_HP_Bar_Enemy : MonoBehaviour
     public float percentage = 1;
     void Update()
     {
-        if (Globals.eState == Globals.GameState.ENCOUNTER)
+        if (Globals.eState == Globals.GameState.ENCOUNTER && Globals.eEncounter == Globals.EncounterType.BOAT)
         {
             if (Globals.EnemyCurrentHP <= 0) {
                 Globals.eState = Globals.GameState.OVERWORLD;
@@ -56,6 +56,10 @@ public class UI_HP_Bar_Enemy : MonoBehaviour
             if (gameObject.layer != 8)
             {
                 gameObject.layer = 8;
+                for (int i = 0; i < transform.childCount; i++)
+                {
+                    transform.GetChild(i).gameObject.layer = 8;
+                }
             }
         }
     }
