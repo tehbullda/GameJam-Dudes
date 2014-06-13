@@ -5,7 +5,7 @@ public class UI_WeaponCharging_Enemy : MonoBehaviour {
  private int currentCharge = 0;
 	// Use this for initialization
 	void Start () {
-	
+        currentCharge = 0;
 	}
 	
 	// Update is called once per frame
