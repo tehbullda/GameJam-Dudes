@@ -4,6 +4,8 @@ using System.Collections;
 public class UI_WeaponCharging_Player : MonoBehaviour {
 
     public AudioClip[] CannonFire;
+    public AudioClip[] CannonMiss;
+    public GameObject CannonImpactObjectType;
     private int currentCharge = 0;
 	// Use this for initialization
 	void Start () {
@@ -26,13 +28,29 @@ public class UI_WeaponCharging_Player : MonoBehaviour {
                         audio.Play();
                     }
                 }
+
                 float AttackAccuracy = Random.Range(0.0f, 1.0f);
                 if (AttackAccuracy < Globals.Accuracy)
                 {
                     Globals.EnemyCurrentHP -= 10;
+
+                    Vector3 impactEffectOffset = Globals.Target.transform.position;
+                    impactEffectOffset.x += Random.Range(-0.5f, 0.5f);
+                    impactEffectOffset.y += Random.Range(-0.5f, 0.5f);
+                    impactEffectOffset.z = CannonImpactObjectType.transform.position.z;
+                    Instantiate(CannonImpactObjectType, impactEffectOffset, CannonImpactObjectType.transform.rotation);
                 }
                 else {
                     Debug.Log("MISS");
+                    if (CannonMiss.Length > 0)
+                    {
+                        int iSoundNr = Random.Range(0, CannonMiss.Length);
+                        if (CannonMiss[iSoundNr])
+                        {
+                            audio.clip = CannonMiss[iSoundNr];
+                            audio.Play();
+                        }
+                    }
                 }
                 currentCharge = 0;
             }

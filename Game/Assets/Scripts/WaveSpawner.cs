@@ -25,7 +25,7 @@ public class WaveSpawner : MonoBehaviour
                 fSpawnTimer = 0.5f;
                 if (WaveObjectType)
                 {
-                    GameObject newObj = (GameObject)Instantiate(WaveObjectType, new Vector3(0, 0, 0), WaveObjectType.transform.rotation);
+                    Instantiate(WaveObjectType, new Vector3(0, 0, 0), WaveObjectType.transform.rotation);
                     ++iWavesExisting;
                 }
             }

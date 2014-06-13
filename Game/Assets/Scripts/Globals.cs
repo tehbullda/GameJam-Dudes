@@ -45,6 +45,8 @@ public class Globals : MonoBehaviour
     public static int iIslandCounterCurrent = 0;
     public static int iIslandCounterMax = 2;
 
+    public static bool bCrowsnestManned = false;
+
     public static GameState eState = GameState.OVERWORLD;
     public static EncounterType eEncounter;
     public static IslandType eIslandType;
