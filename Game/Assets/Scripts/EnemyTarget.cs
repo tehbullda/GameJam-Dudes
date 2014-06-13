@@ -22,6 +22,7 @@ public class EnemyTarget : MonoBehaviour
         {
             Globals.Target = gameObject;
             Globals.WeaponTargetingActive = false;
+            Globals.GamePaused = false;
         }
     }
 }

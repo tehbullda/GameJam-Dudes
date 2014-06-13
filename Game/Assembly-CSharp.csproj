@@ -56,6 +56,7 @@
      <Compile Include="Assets\Scripts\MusicPlayer.cs" />
      <Compile Include="Assets\Scripts\MuteMusic.cs" />
      <Compile Include="Assets\Scripts\OverworldObjectCollision.cs" />
+     <Compile Include="Assets\Scripts\OverworldObjectDespawn.cs" />
      <Compile Include="Assets\Scripts\ReturnToMainMenu.cs" />
      <Compile Include="Assets\Scripts\SelectWeaponTarget.cs" />
      <Compile Include="Assets\Scripts\SetAlpha.cs" />
@@ -64,6 +65,8 @@
      <Compile Include="Assets\Scripts\UI_Accuracy.cs" />
      <Compile Include="Assets\Scripts\UI_CurrentTarget.cs" />
      <Compile Include="Assets\Scripts\UI_Evasion.cs" />
+     <Compile Include="Assets\Scripts\WaveMovement.cs" />
+     <Compile Include="Assets\Scripts\WaveSpawner.cs" />
      <Compile Include="Assets\Scripts\UI_HP_Bar_Enemy.cs" />
      <Compile Include="Assets\Scripts\UI_HP_Bar_Player.cs" />
      <Compile Include="Assets\Scripts\UI_WeaponCharging_Enemy.cs" />
