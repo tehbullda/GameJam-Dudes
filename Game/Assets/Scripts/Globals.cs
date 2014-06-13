@@ -18,6 +18,12 @@ public class Globals : MonoBehaviour {
 
     public static float Accuracy = 0.85f;
     public static float Evasion = 0.30f;
+    public static int PlayerHP = 100;
+
+    public static int EnemyEncounterCounter = 0;
+    public static int EnemyMaxHP = 50;
+    public static int EnemyCurrentHP = 50;
+
     public static GameObject Target;
 
     public static bool WeaponTargetingActive = false;
