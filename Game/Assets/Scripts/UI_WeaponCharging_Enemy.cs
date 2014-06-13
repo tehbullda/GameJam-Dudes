@@ -87,6 +87,7 @@ public class UI_WeaponCharging_Enemy : MonoBehaviour
             {
                 gameObject.layer = 5;
             }
+
         }
         else
         {

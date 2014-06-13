@@ -46,7 +46,6 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\FleeButton.cs" />
      <Compile Include="Assets\Scripts\Button.cs" />
      <Compile Include="Assets\Scripts\ChangeLayer.cs" />
      <Compile Include="Assets\Scripts\ChangeToLayerHide.cs" />
@@ -54,6 +53,7 @@
      <Compile Include="Assets\Scripts\DestroyAfterTime.cs" />
      <Compile Include="Assets\Scripts\EncounterSpawner.cs" />
      <Compile Include="Assets\Scripts\EnemyTarget.cs" />
+     <Compile Include="Assets\Scripts\FleeButton.cs" />
      <Compile Include="Assets\Scripts\Globals.cs" />
      <Compile Include="Assets\Scripts\MusicPlayer.cs" />
      <Compile Include="Assets\Scripts\MuteMusic.cs" />
@@ -64,6 +64,7 @@
      <Compile Include="Assets\Scripts\SelectWeaponTarget.cs" />
      <Compile Include="Assets\Scripts\SetAlpha.cs" />
      <Compile Include="Assets\Scripts\ShipOverworldMovement.cs" />
+     <Compile Include="Assets\Scripts\ShowBasedOnEventType.cs" />
      <Compile Include="Assets\Scripts\SwapViewOnStateChange.cs" />
      <Compile Include="Assets\Scripts\UI_Accuracy.cs" />
      <Compile Include="Assets\Scripts\UI_CurrentTarget.cs" />
@@ -74,7 +75,6 @@
      <Compile Include="Assets\Scripts\UI_WeaponCharging_Player.cs" />
      <Compile Include="Assets\Scripts\WaveMovement.cs" />
      <Compile Include="Assets\Scripts\WaveSpawner.cs" />
-     <Compile Include="Assets\ShowBasedOnEventType.cs" />
      <None Include="Assets\Standard Assets\Skyboxes\_skybox info.txt" />
      <None Include="Assets\Standard Assets\Water (Basic)\Sources\Shaders\FX-Water Simple.shader" />
  <Reference Include="Assembly-UnityScript-firstpass">

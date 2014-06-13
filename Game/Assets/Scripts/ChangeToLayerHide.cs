@@ -35,7 +35,7 @@ public class ChangeToLayerHide : MonoBehaviour
             }
             return;
         }
-
+		
         //don't show IF
         if (StateWhenShow != Globals.eState || (EncounterWhenShow != Globals.eEncounter && EncounterWhenShow != Globals.EncounterType.NONE))
         {
