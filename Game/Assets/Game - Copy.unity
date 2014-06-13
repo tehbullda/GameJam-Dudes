@@ -1504,7 +1504,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0047e71270aed2d4ea1b494356e61d02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  WhenToShow: 1
+  StateWhenShow: 1
+  EncounterWhenShow: 1
+  ShowWithCrowsNest: 0
 --- !u!1 &1036266069
 GameObject:
   m_ObjectHideFlags: 0
@@ -4042,7 +4044,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0047e71270aed2d4ea1b494356e61d02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  WhenToShow: 1
+  StateWhenShow: 1
+  EncounterWhenShow: 1
+  ShowWithCrowsNest: 1
 --- !u!23 &1744852746
 Renderer:
   m_ObjectHideFlags: 0
@@ -4253,7 +4257,7 @@ GameObject:
   - 114: {fileID: 1787240985}
   - 65: {fileID: 1787240986}
   m_Layer: 0
-  m_Name: Button'_BackToMain
+  m_Name: Button_BackToMain
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

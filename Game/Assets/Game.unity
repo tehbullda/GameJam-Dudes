@@ -1000,6 +1000,8 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 25d161bca16770642aebc67437b26a23, type: 3}
   - {fileID: 8300000, guid: 9a1b06806fbcd2c43a727d851865328b, type: 3}
   - {fileID: 8300000, guid: 891223012e9c7fc48a68d710d248a1f4, type: 3}
+  CannonMiss: []
+  CannonImpactObjectType: {fileID: 0}
   percentage: 0
 --- !u!23 &870532893
 Renderer:
@@ -1415,7 +1417,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0047e71270aed2d4ea1b494356e61d02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  WhenToShow: 1
+  StateWhenShow: 1
+  EncounterWhenShow: 0
+  ShowWithCrowsNest: 0
 --- !u!1 &1036266069
 GameObject:
   m_ObjectHideFlags: 0
@@ -1709,7 +1713,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97533cd0ff33ae243a8807d51eaec72a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TypeToShow: 1
+  TypeToShow: 2
 --- !u!1 &1166977831
 GameObject:
   m_ObjectHideFlags: 0
@@ -2066,6 +2070,9 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 25d161bca16770642aebc67437b26a23, type: 3}
   - {fileID: 8300000, guid: 9a1b06806fbcd2c43a727d851865328b, type: 3}
   - {fileID: 8300000, guid: 891223012e9c7fc48a68d710d248a1f4, type: 3}
+  CannonMiss: []
+  EnemyTarget: {fileID: 0}
+  CannonImpactObjectType: {fileID: 0}
   percentage: 0
 --- !u!23 &1445604493
 Renderer:
@@ -2720,7 +2727,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0047e71270aed2d4ea1b494356e61d02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  WhenToShow: 1
+  StateWhenShow: 1
+  EncounterWhenShow: 1
+  ShowWithCrowsNest: 1
 --- !u!23 &1744852746
 Renderer:
   m_ObjectHideFlags: 0

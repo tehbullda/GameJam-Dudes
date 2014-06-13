@@ -4,8 +4,10 @@ using System.Collections;
 public class ChangeToLayerHide : MonoBehaviour
 {
 
-    public Globals.GameState WhenToShow;
-    public bool IsBoat = false;
+    public Globals.GameState StateWhenShow = Globals.GameState.ENCOUNTER;
+    public Globals.EncounterType EncounterWhenShow = Globals.EncounterType.NONE;
+    //public bool IsBoat = false;
+    public bool ShowWithCrowsNest = false;
     // Use this for initialization
     void Start()
     {
@@ -15,28 +17,35 @@ public class ChangeToLayerHide : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (WhenToShow == Globals.eState && gameObject.layer != 5)
+        //show IF
+        if (StateWhenShow == Globals.eState && EncounterWhenShow == Globals.eEncounter
+            || StateWhenShow == Globals.eState && EncounterWhenShow == Globals.EncounterType.NONE)
         {
-            gameObject.layer = 5;
-            for (int i = 0; i < transform.childCount; i++)
+            //crows nest check
+            if ((ShowWithCrowsNest && Globals.bCrowsnestManned) || !ShowWithCrowsNest)
             {
-                transform.GetChild(i).gameObject.layer = 5;
+                if (gameObject.layer != 5)
+                {
+                    gameObject.layer = 5;
+                    for (int i = 0; i < transform.childCount; i++)
+                    {
+                        transform.GetChild(i).gameObject.layer = 5;
+                    }
+                }
             }
+            return;
         }
-        else if (WhenToShow != Globals.eState && gameObject.layer != 8)
+
+        //don't show IF
+        if (StateWhenShow != Globals.eState || (EncounterWhenShow != Globals.eEncounter && EncounterWhenShow != Globals.EncounterType.NONE))
         {
-            gameObject.layer = 8;
-            for (int i = 0; i < transform.childCount; i++)
+            if (gameObject.layer != 8)
             {
-                transform.GetChild(i).gameObject.layer = 8;
-            }
-        }
-        if (IsBoat && Globals.eEncounter != Globals.EncounterType.BOAT && gameObject.layer != 8)
-        {
-            gameObject.layer = 8;
-            for (int i = 0; i < transform.childCount; i++)
-            {
-                transform.GetChild(i).gameObject.layer = 8;
+                gameObject.layer = 8;
+                for (int i = 0; i < transform.childCount; i++)
+                {
+                    transform.GetChild(i).gameObject.layer = 8;
+                }
             }
         }
     }

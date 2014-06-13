@@ -14,6 +14,7 @@ public class Globals : MonoBehaviour
 
     public enum EncounterType
     {
+        NONE,
         BOAT,
         ISLAND,
     };
