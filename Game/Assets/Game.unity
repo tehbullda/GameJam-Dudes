@@ -1145,16 +1145,11 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 25d161bca16770642aebc67437b26a23, type: 3}
   - {fileID: 8300000, guid: 9a1b06806fbcd2c43a727d851865328b, type: 3}
   - {fileID: 8300000, guid: 891223012e9c7fc48a68d710d248a1f4, type: 3}
-<<<<<<< HEAD
-  CannonMiss: []
-  CannonImpactObjectType: {fileID: 0}
-=======
   CannonMiss:
   - {fileID: 8300000, guid: b3422d9225746814bafd3888269307eb, type: 3}
   - {fileID: 8300000, guid: c75d841b4a3a93547b16de964ecddee5, type: 3}
   CannonImpactObjectType: {fileID: 100000, guid: 5d95358230dfe0a4692e1ab1502ba7d7,
     type: 2}
->>>>>>> 8cb7bb5534a9a4f758e0adb9774c87bc1573c34e
   percentage: 0
 --- !u!23 &870532893
 Renderer:
@@ -1570,14 +1565,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0047e71270aed2d4ea1b494356e61d02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-<<<<<<< HEAD
-  StateWhenShow: 1
-  EncounterWhenShow: 0
-  ShowWithCrowsNest: 0
-=======
   WhenToShow: 1
   IsBoat: 0
->>>>>>> 8cb7bb5534a9a4f758e0adb9774c87bc1573c34e
 --- !u!1 &1036266069
 GameObject:
   m_ObjectHideFlags: 0
@@ -1871,7 +1860,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97533cd0ff33ae243a8807d51eaec72a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TypeToShow: 2
+  TypeToShow: 1
 --- !u!1 &1166977831
 GameObject:
   m_ObjectHideFlags: 0
@@ -2158,18 +2147,12 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 25d161bca16770642aebc67437b26a23, type: 3}
   - {fileID: 8300000, guid: 9a1b06806fbcd2c43a727d851865328b, type: 3}
   - {fileID: 8300000, guid: 891223012e9c7fc48a68d710d248a1f4, type: 3}
-<<<<<<< HEAD
-  CannonMiss: []
-  EnemyTarget: {fileID: 0}
-  CannonImpactObjectType: {fileID: 0}
-=======
   CannonMiss:
   - {fileID: 8300000, guid: b3422d9225746814bafd3888269307eb, type: 3}
   - {fileID: 8300000, guid: c75d841b4a3a93547b16de964ecddee5, type: 3}
   EnemyTarget: {fileID: 1141400388}
   CannonImpactObjectType: {fileID: 100000, guid: 5d95358230dfe0a4692e1ab1502ba7d7,
     type: 2}
->>>>>>> 8cb7bb5534a9a4f758e0adb9774c87bc1573c34e
   percentage: 0
 --- !u!23 &1445604493
 Renderer:
@@ -2824,14 +2807,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0047e71270aed2d4ea1b494356e61d02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-<<<<<<< HEAD
-  StateWhenShow: 1
-  EncounterWhenShow: 1
-  ShowWithCrowsNest: 1
-=======
   WhenToShow: 1
   IsBoat: 1
->>>>>>> 8cb7bb5534a9a4f758e0adb9774c87bc1573c34e
 --- !u!23 &1744852746
 Renderer:
   m_ObjectHideFlags: 0
