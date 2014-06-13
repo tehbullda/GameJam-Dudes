@@ -15,7 +15,7 @@ public class UI_WeaponCharging_Enemy : MonoBehaviour
     public float percentage;
     void Update()
     {
-        if (Globals.eState == Globals.GameState.ENCOUNTER && !Globals.GamePaused)
+        if (Globals.eState == Globals.GameState.ENCOUNTER && !Globals.GamePaused && Globals.eEncounter == Globals.EncounterType.BOAT)
         {
             ++currentCharge;
             if (currentCharge >= 100)
