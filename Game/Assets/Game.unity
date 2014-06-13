@@ -1565,8 +1565,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0047e71270aed2d4ea1b494356e61d02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  WhenToShow: 1
-  IsBoat: 0
+  StateWhenShow: 1
+  EncounterWhenShow: 1
+  ShowWithCrowsNest: 0
 --- !u!1 &1036266069
 GameObject:
   m_ObjectHideFlags: 0
@@ -1860,7 +1861,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97533cd0ff33ae243a8807d51eaec72a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TypeToShow: 1
+  TypeToShow: 2
 --- !u!1 &1166977831
 GameObject:
   m_ObjectHideFlags: 0
@@ -2098,7 +2099,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97533cd0ff33ae243a8807d51eaec72a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TypeToShow: 0
+  TypeToShow: 1
 --- !u!1 &1445604490
 GameObject:
   m_ObjectHideFlags: 0
@@ -2807,8 +2808,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0047e71270aed2d4ea1b494356e61d02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  WhenToShow: 1
-  IsBoat: 1
+  StateWhenShow: 1
+  EncounterWhenShow: 1
+  ShowWithCrowsNest: 1
 --- !u!23 &1744852746
 Renderer:
   m_ObjectHideFlags: 0
