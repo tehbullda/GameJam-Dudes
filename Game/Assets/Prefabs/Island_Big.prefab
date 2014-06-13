@@ -12,6 +12,7 @@ GameObject:
   - 23: {fileID: 2300000}
   - 135: {fileID: 13500000}
   - 114: {fileID: 11400000}
+  - 114: {fileID: 11400002}
   m_Layer: 0
   m_Name: Island_Big
   m_TagString: Island
@@ -71,6 +72,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fDespawnCheckTimerReset: 12
   fDespawnCheckTimerCurrent: 12
+--- !u!114 &11400002
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52df6fe3baeb7e445a558ded6c9d63c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!135 &13500000
 SphereCollider:
   m_ObjectHideFlags: 1

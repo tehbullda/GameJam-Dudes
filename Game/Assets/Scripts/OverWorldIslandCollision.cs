@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class OverworldObjectCollision : MonoBehaviour {
+public class OverWorldIslandCollision : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
@@ -9,18 +9,15 @@ public class OverworldObjectCollision : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-    void Update()
-    {
-
+	void Update () {
+	
 	}
-
-    void OnCollisionEnter(Collision col)
-    {
+    void OnCollisionEnter(Collision col) {
         if (col.gameObject.name == "Overworld_PlayerShip")
         {
             Globals.eState = Globals.GameState.ENCOUNTER;
-            Globals.eEncounter = Globals.EncounterType.BOAT;
-            --Globals.iEnemyShipCounterCurrent;
+            Globals.eEncounter = Globals.EncounterType.ISLAND;
+            Globals.eIslandType = (Globals.IslandType)Random.Range(0, (int)Globals.IslandType.SIZE);
             Destroy(gameObject);
         }
     }

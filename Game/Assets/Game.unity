@@ -219,6 +219,7 @@ GameObject:
   - 33: {fileID: 203170584}
   - 23: {fileID: 203170583}
   - 135: {fileID: 203170582}
+  - 114: {fileID: 203170586}
   m_Layer: 0
   m_Name: Overworld_Island
   m_TagString: Untagged
@@ -277,6 +278,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 7
+--- !u!114 &203170586
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 203170581}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 632e0e9c71cb52846a9a0cf625ee65aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fDespawnCheckTimerReset: 12
+  fDespawnCheckTimerCurrent: 12
 --- !u!1 &353272041
 GameObject:
   m_ObjectHideFlags: 0
@@ -513,6 +527,7 @@ GameObject:
   - 65: {fileID: 411744584}
   - 114: {fileID: 411744588}
   - 54: {fileID: 411744589}
+  - 114: {fileID: 411744590}
   m_Layer: 0
   m_Name: Overworld_EnemyShip
   m_TagString: EnemyShip
@@ -597,6 +612,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &411744590
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 411744583}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 632e0e9c71cb52846a9a0cf625ee65aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fDespawnCheckTimerReset: 12
+  fDespawnCheckTimerCurrent: 12
 --- !u!1 &488747314
 GameObject:
   m_ObjectHideFlags: 0
@@ -908,6 +936,7 @@ GameObject:
   - 64: {fileID: 870532894}
   - 23: {fileID: 870532893}
   - 114: {fileID: 870532892}
+  - 82: {fileID: 870532896}
   m_Layer: 5
   m_Name: Texture_WeaponLoadingBar_bar
   m_TagString: Untagged
@@ -938,6 +967,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b8d135f9e3d5a1408e3fbb640b52164, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CannonFire:
+  - {fileID: 8300000, guid: 0258a0833c816734cb0f2f1cef91021d, type: 3}
+  - {fileID: 8300000, guid: 25d161bca16770642aebc67437b26a23, type: 3}
+  - {fileID: 8300000, guid: 9a1b06806fbcd2c43a727d851865328b, type: 3}
+  - {fileID: 8300000, guid: 891223012e9c7fc48a68d710d248a1f4, type: 3}
   percentage: 0
 --- !u!23 &870532893
 Renderer:
@@ -979,6 +1013,64 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 870532890}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!82 &870532896
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 870532890}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500000
+  Pan2D: 0
+  rolloffMode: 1
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: .995833337
+      value: 1.01249993
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
 --- !u!1 &881139864
 GameObject:
   m_ObjectHideFlags: 0
@@ -1814,6 +1906,7 @@ GameObject:
   - 64: {fileID: 1445604494}
   - 23: {fileID: 1445604493}
   - 114: {fileID: 1445604492}
+  - 82: {fileID: 1445604496}
   m_Layer: 5
   m_Name: Texture_WeaponLoadingBar_bar
   m_TagString: Untagged
@@ -1844,6 +1937,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 548ab2fc875a9584ba03223826f8c806, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CannonFire:
+  - {fileID: 8300000, guid: 0258a0833c816734cb0f2f1cef91021d, type: 3}
+  - {fileID: 8300000, guid: 25d161bca16770642aebc67437b26a23, type: 3}
+  - {fileID: 8300000, guid: 9a1b06806fbcd2c43a727d851865328b, type: 3}
+  - {fileID: 8300000, guid: 891223012e9c7fc48a68d710d248a1f4, type: 3}
   percentage: 0
 --- !u!23 &1445604493
 Renderer:
@@ -1885,6 +1983,64 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1445604490}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!82 &1445604496
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1445604490}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500000
+  Pan2D: 0
+  rolloffMode: 1
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: .995833337
+      value: 1.01249993
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
 --- !u!1 &1534259443
 GameObject:
   m_ObjectHideFlags: 0
@@ -2721,7 +2877,7 @@ GameObject:
   - 114: {fileID: 1787240985}
   - 65: {fileID: 1787240986}
   m_Layer: 0
-  m_Name: Button'_BackToMain
+  m_Name: Button_BackToMain
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
