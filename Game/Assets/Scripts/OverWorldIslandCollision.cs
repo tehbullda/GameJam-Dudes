@@ -18,6 +18,7 @@ public class OverWorldIslandCollision : MonoBehaviour {
             Globals.eState = Globals.GameState.ENCOUNTER;
             Globals.eEncounter = Globals.EncounterType.ISLAND;
             Globals.eIslandType = (Globals.IslandType)Random.Range(0, (int)Globals.IslandType.SIZE);
+            Debug.Log(Globals.eIslandType.ToString());
             Destroy(gameObject);
         }
     }

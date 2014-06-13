@@ -46,6 +46,7 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\FleeButton.cs" />
      <Compile Include="Assets\Scripts\Button.cs" />
      <Compile Include="Assets\Scripts\ChangeLayer.cs" />
      <Compile Include="Assets\Scripts\ChangeToLayerHide.cs" />
