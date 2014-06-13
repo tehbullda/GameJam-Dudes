@@ -65,16 +65,16 @@
      <Compile Include="Assets\Scripts\UI_Accuracy.cs" />
      <Compile Include="Assets\Scripts\UI_CurrentTarget.cs" />
      <Compile Include="Assets\Scripts\UI_Evasion.cs" />
-     <Compile Include="Assets\Scripts\WaveMovement.cs" />
-     <Compile Include="Assets\Scripts\WaveSpawner.cs" />
      <Compile Include="Assets\Scripts\UI_HP_Bar_Enemy.cs" />
      <Compile Include="Assets\Scripts\UI_HP_Bar_Player.cs" />
      <Compile Include="Assets\Scripts\UI_WeaponCharging_Enemy.cs" />
      <Compile Include="Assets\Scripts\UI_WeaponCharging_Player.cs" />
+     <Compile Include="Assets\Scripts\WaveMovement.cs" />
+     <Compile Include="Assets\Scripts\WaveSpawner.cs" />
      <None Include="Assets\Standard Assets\Skyboxes\_skybox info.txt" />
      <None Include="Assets\Standard Assets\Water (Basic)\Sources\Shaders\FX-Water Simple.shader" />
  <Reference Include="Assembly-UnityScript-firstpass">
- <HintPath>D:/Projekt/Github storage/GameJam-Dudes/Game/Library/ScriptAssemblies/Assembly-UnityScript-firstpass.dll</HintPath>
+ <HintPath>C:/Users/Bullda/Documents/GitHub/GameJam-Dudes/Game/Library/ScriptAssemblies/Assembly-UnityScript-firstpass.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>
