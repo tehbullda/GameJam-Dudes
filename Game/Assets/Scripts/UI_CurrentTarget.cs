@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class UI_CurrentTarget : MonoBehaviour {
-
+    public int fontSize = 18;
 	// Use this for initialization
 	void Start () {
 	
@@ -14,10 +14,12 @@ public class UI_CurrentTarget : MonoBehaviour {
         {
             if (Globals.Target)
             {
+                gameObject.guiText.fontSize = fontSize;
                 gameObject.guiText.text = Globals.Target.name;
             }
             else
             {
+                gameObject.guiText.fontSize = fontSize;
                 gameObject.guiText.text = "No target";
             }
         }

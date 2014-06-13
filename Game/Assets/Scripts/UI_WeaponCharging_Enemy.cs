@@ -18,7 +18,7 @@ public class UI_WeaponCharging_Enemy : MonoBehaviour {
                 float AttackAccuracy = Random.Range(0.0f, 1.0f);
                 if (AttackAccuracy > Globals.Evasion)
                 {
-                    Globals.PlayerHP -= 100;
+                    Globals.PlayerHP -= 10;
                 }
                 currentCharge = 0;
             }
