@@ -83,21 +83,12 @@ public class UI_WeaponCharging_Enemy : MonoBehaviour
             transform.localScale = new Vector3(transform.localScale.x, transform.localScale.y, nextscale);
             transform.localPosition = new Vector3(transform.localPosition.x, transform.localPosition.y, nextpos);
 
-            if (!Globals.bCrowsnestManned)
+
+            if (gameObject.layer != 5 && Globals.bCrowsnestManned)
             {
-                if (gameObject.layer != 8)
-                {
-                    gameObject.layer = 8;
-                }
+                gameObject.layer = 5;
             }
-            else
-            {
-                if (gameObject.layer != 5)
-                {
-                    gameObject.layer = 5;
-                    print("im visible, mothafuckah");
-                }
-            }
+
         }
         else
         {

@@ -17,13 +17,16 @@ public class ChangeToLayerHide : MonoBehaviour
     {
         if (WhenToShow == Globals.eState && gameObject.layer != 5)
         {
-            gameObject.layer = 5;
-            for (int i = 0; i < transform.childCount; i++)
+            if (!IsBoat)
             {
-                transform.GetChild(i).gameObject.layer = 5;
+                gameObject.layer = 5;
+                for (int i = 0; i < transform.childCount; i++)
+                {
+                    transform.GetChild(i).gameObject.layer = 5;
+                }
             }
         }
-        else if (WhenToShow != Globals.eState && gameObject.layer != 8)
+        else if ((WhenToShow != Globals.eState || (IsBoat && Globals.eEncounter != Globals.EncounterType.BOAT)) && gameObject.layer != 8)
         {
             gameObject.layer = 8;
             for (int i = 0; i < transform.childCount; i++)
