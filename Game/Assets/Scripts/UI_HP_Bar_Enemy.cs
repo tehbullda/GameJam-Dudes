@@ -20,6 +20,8 @@ public class UI_HP_Bar_Enemy : MonoBehaviour
             if (Globals.EnemyCurrentHP <= 0) {
                 Globals.eState = Globals.GameState.OVERWORLD;
                 Globals.EnemyCurrentHP = Globals.EnemyMaxHP;
+                Globals.PlayerHP = Globals.PlayerMaxHP;
+                Globals.Target = null;
             }
             if (gameObject.layer != 5)
             {
