@@ -15,6 +15,10 @@ public class UI_HP_Bar_Player : MonoBehaviour
     {
         if (Globals.eState == Globals.GameState.ENCOUNTER)
         {
+            if (Globals.PlayerHP <= 0) {
+                Globals.eState = Globals.GameState.GAMEOVER;
+                Globals.PlayerHP = Globals.PlayerMaxHP;
+            }
             if (gameObject.layer != 5)
             {
                 gameObject.layer = 5;

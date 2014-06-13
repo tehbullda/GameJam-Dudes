@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class UI_WeaponCharging : MonoBehaviour {
+public class UI_WeaponCharging_Player : MonoBehaviour {
     private int currentCharge = 0;
 	// Use this for initialization
 	void Start () {
@@ -15,7 +15,14 @@ public class UI_WeaponCharging : MonoBehaviour {
         {
             ++currentCharge;
             if (currentCharge >= 100) {
-                Globals.EnemyCurrentHP -= 10;
+                float AttackAccuracy = Random.Range(0.0f, 1.0f);
+                if (AttackAccuracy < Globals.Accuracy)
+                {
+                    Globals.EnemyCurrentHP -= 10;
+                }
+                else {
+                    Debug.Log("MISS");
+                }
                 currentCharge = 0;
             }
             if (gameObject.layer != 5)

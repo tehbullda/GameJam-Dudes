@@ -7,11 +7,11 @@ public class SwapViewOnStateChange : MonoBehaviour
     private Globals.GameState eCurrentState = Globals.GameState.OVERWORLD;
     private Vector3 OverworldCameraPos;
     public Vector3 EncounterCameraPos;
+    public Vector3 GameOverCameraPos;
 
-    // Use this for initialization
-    void Start()
+    void Awake()
     {
-
+        transform.position = new Vector3(0,0,-13.4f);
     }
 
     // Update is called once per frame
@@ -27,6 +27,10 @@ public class SwapViewOnStateChange : MonoBehaviour
             else if (Globals.eState == Globals.GameState.OVERWORLD)
             {
                 transform.position = OverworldCameraPos;
+            }
+            else if (Globals.eState == Globals.GameState.GAMEOVER)
+            {
+                transform.position = GameOverCameraPos;
             }
             eCurrentState = Globals.eState;
         }
