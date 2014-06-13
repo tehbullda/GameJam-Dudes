@@ -5,25 +5,30 @@ public class UI_WeaponCharging_Enemy : MonoBehaviour
 {
     public AudioClip[] CannonFire;
     public AudioClip[] CannonMiss;
-    private int currentCharge = 0;
     public GameObject EnemyTarget;
     public GameObject CannonImpactObjectType;
+    public GameObject CannonFireObjectType;
+    public GameObject EnemyCannon;
+    public Vector3 CannonFireEffectPosOffset;
+
+    public float fCannonChargeTime = 2.5f;
+    private float fCannonChargeTimerCurrent = 0.0f;
+    private float fChargePercentage = 0.0f;
     // Use this for initialization
     void Start()
     {
-        currentCharge = 0;
+
     }
 
     // Update is called once per frame
-    public float percentage;
     void Update()
     {
         if (Globals.eState == Globals.GameState.ENCOUNTER && !Globals.GamePaused && Globals.eEncounter == Globals.EncounterType.BOAT)
         {
-            ++currentCharge;
-            if (currentCharge >= 100)
+            fCannonChargeTimerCurrent += Time.deltaTime;
+            if (fCannonChargeTimerCurrent >= fCannonChargeTime)
             {
-                currentCharge = 0;
+                fCannonChargeTimerCurrent = 0.0f;
                 if (CannonFire.Length > 0)
                 {
                     int iSoundNr = Random.Range(0, CannonFire.Length);
@@ -33,16 +38,27 @@ public class UI_WeaponCharging_Enemy : MonoBehaviour
                         audio.Play();
                     }
                 }
+
+                //creating fire-effect
+                if (CannonFireObjectType)
+                {
+                    Instantiate(CannonFireObjectType, EnemyCannon.transform.position + CannonFireEffectPosOffset, CannonFireObjectType.transform.rotation);
+                }
+
                 float AttackAccuracy = Random.Range(0.0f, 1.0f);
                 if (AttackAccuracy > Globals.Evasion)
                 {
                     Globals.PlayerHP -= 10;
 
-                    Vector3 impactEffectOffset = EnemyTarget.transform.position;
-                    impactEffectOffset.x += Random.Range(-0.5f, 0.5f);
-                    impactEffectOffset.y += Random.Range(-0.5f, 0.5f);
-                    impactEffectOffset.z = CannonImpactObjectType.transform.position.z;
-                    Instantiate(CannonImpactObjectType, impactEffectOffset, CannonImpactObjectType.transform.rotation);
+                    //creating hit-effect
+                    if (CannonImpactObjectType)
+                    {
+                        Vector3 impactEffectOffset = EnemyTarget.transform.position;
+                        impactEffectOffset.x += Random.Range(-0.5f, 0.5f);
+                        impactEffectOffset.y += Random.Range(-0.5f, 0.5f);
+                        impactEffectOffset.z = CannonImpactObjectType.transform.position.z;
+                        Instantiate(CannonImpactObjectType, impactEffectOffset, CannonImpactObjectType.transform.rotation);
+                    }
                 }
                 else
                 {
@@ -59,10 +75,10 @@ public class UI_WeaponCharging_Enemy : MonoBehaviour
             }
             //Scale from 0 to 0.923
             //Position from -4.77 to 0.04
-            percentage = currentCharge / 100.0f;
-            float nextpos = 4.81f * percentage;
+            fChargePercentage = fCannonChargeTimerCurrent / fCannonChargeTime;
+            float nextpos = 4.81f * fChargePercentage;
             nextpos -= 4.77f;
-            float nextscale = 0.923f * percentage;
+            float nextscale = 0.923f * fChargePercentage;
             if (nextscale < 0.0f)
             {
                 nextscale = 0.0f;

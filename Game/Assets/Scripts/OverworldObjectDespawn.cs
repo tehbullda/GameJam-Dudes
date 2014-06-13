@@ -29,11 +29,13 @@ public class OverworldObjectDespawn : MonoBehaviour
                     if (tag == "EnemyShip")
                     {
                         --Globals.iEnemyShipCounterCurrent;
+                        Globals.eEncounter = Globals.EncounterType.BOAT;
                         print("destroying " + gameObject.name);
                     }
                     else if (tag == "Island")
                     {
                         --Globals.iIslandCounterCurrent;
+                        Globals.eEncounter = Globals.EncounterType.ISLAND;
                         print("destroying " + gameObject.name);
                     }
                     Destroy(gameObject);

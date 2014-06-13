@@ -19,10 +19,6 @@ public class UI_HP_Bar_Player : MonoBehaviour
                 Globals.eState = Globals.GameState.GAMEOVER;
                 Globals.PlayerHP = Globals.PlayerMaxHP;
             }
-            if (gameObject.layer != 5)
-            {
-                gameObject.layer = 5;
-            }
             float percentage = Globals.PlayerHP / 100.0f;
             float nextpos = 1.82f * percentage; //1.6 to 3.42
             nextpos += 1.6f;
@@ -45,12 +41,6 @@ public class UI_HP_Bar_Player : MonoBehaviour
             }
             transform.localScale = new Vector3(nextscale, transform.localScale.y, transform.localScale.z);
             transform.localPosition = new Vector3(nextpos, transform.localPosition.y, transform.localPosition.z);
-        }
-        else {
-            if (gameObject.layer != 8)
-            {
-                gameObject.layer = 8;
-            }
         }
     }
 }

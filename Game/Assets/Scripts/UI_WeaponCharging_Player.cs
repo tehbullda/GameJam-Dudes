@@ -6,7 +6,9 @@ public class UI_WeaponCharging_Player : MonoBehaviour {
     public AudioClip[] CannonFire;
     public AudioClip[] CannonMiss;
     public GameObject CannonImpactObjectType;
-    private int currentCharge = 0;
+
+    public float fCannonChargeTime = 1.5f;
+    private float fCannonChargeTimerCurrent = 0.0f;
 	// Use this for initialization
 	void Start () {
 	
@@ -17,8 +19,11 @@ public class UI_WeaponCharging_Player : MonoBehaviour {
 	void Update () {
         if (Globals.eState == Globals.GameState.ENCOUNTER && Globals.Target && !Globals.GamePaused)
         {
-            ++currentCharge;
-            if (currentCharge >= 100) {
+            //++currentCharge;
+            fCannonChargeTimerCurrent += Time.deltaTime;
+            if (fCannonChargeTimerCurrent >= fCannonChargeTime)
+            {
+                fCannonChargeTimerCurrent = 0.0f;
                 if (CannonFire.Length > 0)
                 {
                     int iSoundNr = Random.Range(0, CannonFire.Length);
@@ -52,7 +57,7 @@ public class UI_WeaponCharging_Player : MonoBehaviour {
                         }
                     }
                 }
-                currentCharge = 0;
+                //currentCharge = 0;
             }
             if (gameObject.layer != 5)
             {
@@ -60,7 +65,7 @@ public class UI_WeaponCharging_Player : MonoBehaviour {
             }
             //Scale from 0 to 0.923
             //Position from -4.77 to 0.04
-            percentage = currentCharge / 100.0f;
+            percentage = fCannonChargeTimerCurrent / fCannonChargeTime;
             float nextpos = 4.81f * percentage;
             nextpos -= 4.77f;
             float nextscale = 0.923f * percentage;
