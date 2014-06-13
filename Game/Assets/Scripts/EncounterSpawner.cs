@@ -17,7 +17,7 @@ public class EncounterSpawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Globals.state == Globals.GameState.OVERWORLD && fSpawnTimerCurrent > 0.0f)
+        if (Globals.eState == Globals.GameState.OVERWORLD && fSpawnTimerCurrent > 0.0f)
         {
             fSpawnTimerCurrent -= Time.deltaTime;
             if (fSpawnTimerCurrent <= 0.0f)

@@ -11,7 +11,7 @@ public class UI_WeaponCharging : MonoBehaviour {
 	// Update is called once per frame
     public float percentage;
 	void Update () {
-        if (Globals.eState == Globals.GameState.ENCOUNTER)
+        if (Globals.eState == Globals.GameState.ENCOUNTER && Globals.Target)
         {
             ++currentCharge;
             if (currentCharge >= 100) {
