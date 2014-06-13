@@ -2,6 +2,8 @@
 using System.Collections;
 
 public class UI_WeaponCharging_Player : MonoBehaviour {
+
+    public AudioClip[] CannonFire;
     private int currentCharge = 0;
 	// Use this for initialization
 	void Start () {
@@ -15,6 +17,15 @@ public class UI_WeaponCharging_Player : MonoBehaviour {
         {
             ++currentCharge;
             if (currentCharge >= 100) {
+                if (CannonFire.Length > 0)
+                {
+                    int iSoundNr = Random.Range(0, CannonFire.Length);
+                    if (CannonFire[iSoundNr])
+                    {
+                        audio.clip = CannonFire[iSoundNr];
+                        audio.Play();
+                    }
+                }
                 float AttackAccuracy = Random.Range(0.0f, 1.0f);
                 if (AttackAccuracy < Globals.Accuracy)
                 {

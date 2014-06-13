@@ -1,20 +1,34 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class UI_WeaponCharging_Enemy : MonoBehaviour {
- private int currentCharge = 0;
-	// Use this for initialization
-	void Start () {
+public class UI_WeaponCharging_Enemy : MonoBehaviour
+{
+    public AudioClip[] CannonFire;
+    private int currentCharge = 0;
+    // Use this for initialization
+    void Start()
+    {
         currentCharge = 0;
-	}
-	
-	// Update is called once per frame
+    }
+
+    // Update is called once per frame
     public float percentage;
-	void Update () {
+    void Update()
+    {
         if (Globals.eState == Globals.GameState.ENCOUNTER)
         {
             ++currentCharge;
-            if (currentCharge >= 100) {
+            if (currentCharge >= 100)
+            {
+                if (CannonFire.Length > 0)
+                {
+                    int iSoundNr = Random.Range(0, CannonFire.Length);
+                    if (CannonFire[iSoundNr])
+                    {
+                        audio.clip = CannonFire[iSoundNr];
+                        audio.Play();
+                    }
+                }
                 float AttackAccuracy = Random.Range(0.0f, 1.0f);
                 if (AttackAccuracy > Globals.Evasion)
                 {
@@ -59,5 +73,5 @@ public class UI_WeaponCharging_Enemy : MonoBehaviour {
                 gameObject.layer = 8;
             }
         }
-	}
+    }
 }
