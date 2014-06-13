@@ -17,7 +17,7 @@ public class CloudMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Globals.eState == Globals.GameState.ENCOUNTER)
+        if (Globals.eState == Globals.GameState.ENCOUNTER && !Globals.GamePaused)
         {
             Vector3 newPos = transform.position;
             newPos.x -= Time.deltaTime * fMoveSpeed;

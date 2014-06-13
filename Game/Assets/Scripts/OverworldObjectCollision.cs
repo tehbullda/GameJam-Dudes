@@ -19,6 +19,7 @@ public class OverworldObjectCollision : MonoBehaviour {
         if (col.gameObject.name == "Overworld_PlayerShip")
         {
             Globals.eState = Globals.GameState.ENCOUNTER;
+            --Globals.iEnemyShipCounterCurrent;
             Destroy(gameObject);
         }
     }

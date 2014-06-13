@@ -23,6 +23,11 @@ public class Globals : MonoBehaviour {
     public static bool WeaponTargetingActive = false;
     public static bool GamePaused = false;
 
+    public static int iEnemyShipCounterCurrent = 0;
+    public static int iEnemyShipCounterMax = 3;
+    public static int iIslandCounterCurrent = 0;
+    public static int iIslandCounterMax = 2;
+
     public static GameState eState = GameState.OVERWORLD;
     public static EncounterType eEncounter;
 
