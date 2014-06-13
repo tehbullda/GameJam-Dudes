@@ -27,12 +27,11 @@ public class EncounterSpawner : MonoBehaviour
                 //spawn some shit yo
                 if (EnemyShipObject && Globals.iEnemyShipCounterCurrent < Globals.iEnemyShipCounterMax && Random.Range(0, 100) <= 65)
                 {
-                    GameObject spawningObject;
                     Vector3 spawnPos;
                     spawnPos.x = Random.Range(-6.4f, 6.4f);
                     spawnPos.y = Camera.main.transform.position.y + Random.Range(6.0f, 9.0f);
                     spawnPos.z = -3.871864f;
-                    spawningObject = (GameObject)Instantiate(EnemyShipObject.gameObject, spawnPos, EnemyShipObject.transform.rotation);
+                    Instantiate(EnemyShipObject.gameObject, spawnPos, EnemyShipObject.transform.rotation);
                     ++Globals.iEnemyShipCounterCurrent;
                     print("spawning ship");
                 }
@@ -42,12 +41,11 @@ public class EncounterSpawner : MonoBehaviour
                     int iSpawnChance = 100; // 0 - 100
                     if (aIslandObjectTypes[iIslandType] && Globals.iIslandCounterCurrent < Globals.iIslandCounterMax && Random.Range(0, 100) <= iSpawnChance)
                     {
-                        GameObject spawningObject;
                         Vector3 spawnPos;
                         spawnPos.x = Random.Range(-5.7f, 5.7f);
                         spawnPos.y = Camera.main.transform.position.y + Random.Range(8.0f, 14.0f);
                         spawnPos.z = -3.871864f;
-                        spawningObject = (GameObject)Instantiate(aIslandObjectTypes[iIslandType].gameObject, spawnPos, aIslandObjectTypes[iIslandType].transform.rotation);
+                        Instantiate(aIslandObjectTypes[iIslandType].gameObject, spawnPos, aIslandObjectTypes[iIslandType].transform.rotation);
                         ++Globals.iIslandCounterCurrent;
                         print("spawning island");
                     }

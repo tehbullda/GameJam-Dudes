@@ -17,6 +17,14 @@ public class Globals : MonoBehaviour
         BOAT,
         ISLAND,
     };
+    public enum IslandType
+    {
+        CHEST,
+        BANDIT,
+        NATIVES,
+        STRANDED,
+        SIZE
+    };
 
     public static float Accuracy = 0.85f;
     public static float Evasion = 0.30f;
@@ -39,6 +47,7 @@ public class Globals : MonoBehaviour
 
     public static GameState eState = GameState.OVERWORLD;
     public static EncounterType eEncounter;
+    public static IslandType eIslandType;
 
     // Use this for initialization
     void Awake()
